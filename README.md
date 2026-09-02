@@ -116,6 +116,23 @@ The reference generator is loaded through the Ollama model tag used in `run_RAG.
 ollama pull qwen3:30b
 ```
 
+### External dependencies
+
+The Python dependencies can be installed from `requirements.txt`. Java and Ollama must be installed separately.
+
+- Java is required by Pyserini/Lucene for BM25 indexing and retrieval.  
+  Installation: https://adoptium.net/
+
+- Ollama is required to run the local Qwen generators.  
+  Installation: https://ollama.com/download
+
+After installing Ollama, download the generator used by the reference pipeline:
+
+```bash
+ollama pull qwen3:30b
+
+```
+
 ## Reproducing the development-set reference pipeline
 
 Run all commands from the repository root.
@@ -129,8 +146,8 @@ python "data_aggregating&cleaning/jsonl_aggregation.py" \
   --input_dir "AVeriTeC/data/<downloaded-evidence-directory>" \
   --output_path "AVeriTeC/data/aggregated_raw.jsonl" \
   --no_delete
-```
 
+```
 The `--no_delete` option is important: without it, the aggregation script deletes each source file after it has been merged successfully.
 
 ### 2. Construct the development and held-out splits
