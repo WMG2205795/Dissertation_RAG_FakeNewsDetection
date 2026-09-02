@@ -120,18 +120,24 @@ ollama pull qwen3:30b
 
 The Python dependencies can be installed from `requirements.txt`. Java and Ollama must be installed separately.
 
-- Java is required by Pyserini/Lucene for BM25 indexing and retrieval.  
+- Java is required by Pyserini/Lucene for BM25 indexing and retrieval. (JDK 21) 
   Installation: https://adoptium.net/
 
+Pyserini/Lucene requires a complete JDK. After installing the JDK, configure `JAVA_HOME` and add the JDK `bin` directory to `PATH`.
+
+On Windows:
+
+1. Open **Environment Variables**.
+2. Create the system variable:
+
+```text
+JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-<installed-version>
+```
 - Ollama is required to run the local Qwen generators.  
   Installation: https://ollama.com/download
 
 After installing Ollama, download the generator used by the reference pipeline:
 
-```bash
-ollama pull qwen3:30b
-
-```
 
 ## Reproducing the development-set reference pipeline
 
