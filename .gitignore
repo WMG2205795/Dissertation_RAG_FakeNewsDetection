@@ -1,0 +1,90 @@
+# ==================================================
+# AVeriTeC data
+# ==================================================
+
+# Ignore all downloaded and generated files under data
+AVeriTeC/data/*
+
+# Keep the internal_split directory so that the two
+# experimental ID records can remain version-controlled
+!AVeriTeC/data/internal_split/
+
+# Ignore everything inside internal_split first
+AVeriTeC/data/internal_split/*
+
+# Retain only the claim-index records used in the dissertation
+!AVeriTeC/data/internal_split/dev_ids_200.json
+!AVeriTeC/data/internal_split/test_ids_600.json
+
+# Generated development and test evidence stores
+AVeriTeC/evidence_store/
+
+
+# ==================================================
+# Generated experimental artifacts
+# ==================================================
+
+output/
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Dense vectors and model artifacts
+*.npy
+*.npz
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Lucene indexes, checkpoints and retrieval caches
+checkpoint.json
+merge_failed_files.txt
+
+
+# ==================================================
+# Python environments and caches
+# ==================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+env/
+ENV/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+
+# ==================================================
+# Jupyter
+# ==================================================
+
+.ipynb_checkpoints/
+
+
+# ==================================================
+# IDE and operating-system files
+# ==================================================
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# ==================================================
+# Temporary files
+# ==================================================
+
+*.tmp
+*.temp
+*.log
