@@ -141,7 +141,7 @@ python "data_aggregating&cleaning/test_dev_split.py"
 
 This reads `AVeriTeC/data/train.json` and writes the sampled claim and ID files to `AVeriTeC/data/internal_split/`. The configured development distribution is 54 Supported, 114 Refuted, 12 Conflicting Evidence/Cherrypicking and 20 Not Enough Evidence claims. The configured held-out distribution is 162, 342, 36 and 60 claims respectively.
 
-The development and held-out claim sets are non-overlapping. The supplied ID files document the samples used for the reported dissertation experiments; regenerated splits may differ as described above.
+The development and held-out claim sets are non-overlapping. The supplied ID files document the samples used for the reported dissertation experiments; regenerated splits may differ as described above. You can ignore this and directly run the evidence_store_split file with the supplied ID  files. 
 
 ### 3. Split the aggregated evidence store
 
